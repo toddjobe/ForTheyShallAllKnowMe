@@ -1,0 +1,178 @@
+\documentclass[12pt, letterpaper]{book}
+\usepackage[margin=1in]{geometry} % layouts
+% mobile phone layout
+%\documentclass[12pt, a6paper]{book}
+%\usepackage[margin=5mm]{geometry} % layouts
+% ipad layout
+%\documentclass[12pt, a5paper]{book}
+%\usepackage[margin=5mm]{geometry} % layouts
+
+%\teacherfalse
+
+\usepackage{titlesec} % custom chapter titles.
+\usepackage{bibleref} % bible verse quoting
+\usepackage{multicol} % two-column scripture readings
+\usepackage{attrib} % bible verse quoting
+\usepackage[hidelinks]{hyperref} % locating stuff
+\usepackage{comment} % for conditional compilation
+\usepackage{booktabs} % for a good table
+%\usepackage{lipsum} % fill in gaps for fomatting
+%\usepackage{showframe} % layout
+
+%----------------------------------------------------------
+\newcommand*{\wscoclogo}{logo} % Generic publisher logo
+%----Begin Custom Title
+\newcommand*{\titleGM}{\begingroup % Create the command for including the title page in the document
+\hbox{ % Horizontal box
+\hspace*{0.08\textwidth} % Whitespace to the left of the title page
+\rule{1pt}{\textheight} % Vertical line
+\hspace*{0.04\textwidth} % Whitespace between the vertical line and title page text
+\parbox[b]{0.9\textwidth}{ % Paragraph box which restricts text to less than the width of the page
+
+{\noindent\LARGE\bfseries ``For They Shall All Know Me''}\\[\baselineskip]
+{\Large \textit{Developing a New Covenant Relationship with God}}\\[2\baselineskip]
+{\noindent\LARGE TEACHERS MANUAL}\\[4\baselineskip]
+
+
+{\Large \textsc{Todd Jobe}} % Author name
+
+\vspace{0.5\textheight} % Whitespace between the title block and the publisher
+{\noindent Walnut Street Church of Christ \wscoclogo}\\[\baselineskip] % Publisher and logo
+}}
+\endgroup}
+%----End Custom Title
+%---------Old Title----------------------------------------------------------
+%\title{``For They Shall All Know Me''\\\Large{Developing a New Covenant Relationship with God}\\\LARGE\uppercase{TEACHERS MANUAL}}
+%\author{Walnut Street Church of Christ\\Todd Jobe}
+%\date{Spring 2016}
+%----------------------------------------------------------
+
+
+\renewcommand\chaptername{Lesson}
+
+% sectioning with conditional compilation using specialcomment
+% if you don't want to include a section just follow this portion with
+% \excludecomment{nameofsection}
+\specialcomment{intro}{\section*{Introduction}}{}
+\specialcomment{bible}{
+\section*{Scripture Readings}
+\begin{multicols}{2}
+}
+{
+	\end{multicols}
+}
+\specialcomment{goals}{
+	\begingroup
+	\newcommand{\goal}{\item}
+	
+	\section*{Goals}
+	
+	\begin{itemize} \itemsep1pt \parskip0pt \parsep0pt
+	
+}
+{
+	\end{itemize}
+	\endgroup
+}
+\specialcomment{discussion}{\section*{Discussion}}{}
+\specialcomment{questions}{
+	
+	\newcommand{\q}{\item}
+	\clearpage
+	\section*{Questions}
+	\begin{enumerate} \itemsep1pt \parsep200pt
+}
+{
+	\end{enumerate}
+}
+
+%\excludecomment{goals}
+%\excludecomment{intro}
+%\excludecomment{bible}
+\excludecomment{discussion}
+%\excludecomment{questions}
+
+\renewcommand{\labelitemi}{--} % better start to lists.
+\newcommand\dsubsec[3]{\subsection*{#1 \normalsize{(#2, #3 min)}}} % discussion subsection
+%\newcommand\questions{\section*{Questions}} 
+\newcommand\bv[2]{\subsubsection*{\bibleverse{#1}#2}} % bible vers in Scripture Readings section
+\newcommand\bve[2]{\subsubsection*{\bibleverse{#1}#2~\scriptsize{(ESV)}}} % bible vers in Scripture Readings section
+\newcommand\bvh[2]{\subsubsection*{\bibleverse{#1}#2~\scriptsize{(HCSB)}}\label{bv:#1#2}} % bible vers in Scripture Readings section
+\newcommand\bvs[2]{\emph{\bibleverse{#1}#2} -- } % bible verse intext reference
+
+% chapter format
+\titleformat{\chapter}[hang] 
+{\normalfont\Large\bfseries}{\chaptertitlename\ \thechapter:}{0.2em}{} 
+\titlespacing*{\chapter}{0pt}{-20pt}{10pt}
+
+% sectioning formats
+\titleformat{\section}
+{\normalfont\large\bfseries}{\thesection}{.5em}{}[{\titlerule[0.8pt]}]
+\titleformat{\subsection}
+{\normalfont\normalsize\bfseries}{\thesubsection}{.5em}{}
+\titleformat{\subsubsection}
+{\normalfont\normalsize\bfseries}{\thesubsubsection}{.5em}{}
+\titleformat{\paragraph}[runin]
+{\normalfont\normalsize\bfseries}{\theparagraph}{.5em}{}
+\titleformat{\subparagraph}[runin]
+{\normalfont\normalsize\bfseries}{\thesubparagraph}{.5em}{}
+
+\begin{document}
+
+\frontmatter
+
+% --- Old Title
+%\maketitle
+% --- Custom Title
+\thispagestyle{empty} % Removes page numbers from title page
+\titleGM % This command includes the title page
+% --- 
+\clearpage
+~\vfill
+\begin{center}
+Scripture quotations marked (ESV) are from the ESV\textsuperscript{\textregistered}. Bible (The Holy Bible, English Standard Version\textsuperscript{\textregistered}.), copyright \textcopyright~2001 by Crossway, a publishing ministry of Good News Publishers. Used by permission. All rights reserved.
+
+\vspace{2em}
+
+Scripture quotations marked (HCSB), are taken from the Holman Christian Standard Bible\textsuperscript{\textregistered}, Copyright \textcopyright~1999, 2000, 2002, 2003, 2009 by Holman Bible Publishers. Used by permission. HCSB\textsuperscript{\textregistered} is a federally registered trademark of Holman Bible Publishers.
+\end{center}
+\clearpage
+
+\tableofcontents
+
+\input{ThemePage}
+
+\input{scriptureReference}
+
+\mainmatter
+
+\input{01-Introduction}
+
+\input{02-IWillBeTheirGod}
+
+\input{03-TheyShallBeMyPeople}
+
+\input{04-TheCovenantIMadeWithTheirFathers}
+
+\input{05-IWasTheirHusband}
+
+\input{06-MyCovenantTheyBroke}
+
+\input{07-BeholdTheDaysAreComing}
+
+\input{08-IWillMakeANewCovenant}
+
+\input{09-WrittenOnTheirHearts}
+
+\input{10-ForTheyShallAllKnowMe}
+
+\input{11-FromTheLeastToTheGreatest}
+
+\input{12-IWillForgiveTheirIniquity}
+
+\input{13-Review}
+
+\appendix
+\backmatter
+
+\end{document}

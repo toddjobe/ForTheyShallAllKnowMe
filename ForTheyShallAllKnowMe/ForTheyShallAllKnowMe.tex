@@ -1,0 +1,70 @@
+\documentclass[12pt]{book}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{titlesec}
+\usepackage{lipsum}
+%\usepackage{showframe}
+\usepackage{bibleref}
+\usepackage{attrib}
+
+%----------------------------------------------------------
+\renewcommand\chaptername{Lesson}
+
+\newcommand\intro{\section*{Introduction}}
+\newcommand\bible{\section*{Scripture Readings}}
+\newenvironment{goals}{
+	\newcommand{\goal}{\item}
+	\section*{Goals}
+	\begin{itemize}
+}
+{
+	\end{itemize}
+}
+\newcommand\discussion{\section*{Discussion}}
+\newcommand\questions{\section*{Questions}}
+\newcommand\bv[2]{\attrib{\bibleverse{#1}#2}}
+
+\titleformat{\chapter}[hang] 
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter:}{0.2em}{} 
+\titlespacing*{\chapter}{0pt}{-20pt}{10pt}
+%----------------------------------------------------------
+\title{``For They Shall All Know Me''\\\Large{Studies On the New Covenant}}
+\author{Walnut Street Church of Christ\\Todd Jobe}
+\date{Spring 2016}
+%----------------------------------------------------------
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\mainmatter
+\input{01-Introduction}
+
+\input{02-IWillBeTheirGod}
+
+\input{03-TheyShallBeMyPeople}
+
+\input{04-TheCovenantIMadeWithTheirFathers}
+
+\input{05-IWasTheirHusband}
+
+\input{06-MyCovenantTheyBroke}
+
+\input{07-BeholdTheDaysAreComing}
+
+\input{08-IWillMakeANewCovenant}
+
+\input{09-WrittenOnTheirHearts}
+
+\input{10-ForTheyShallAllKnowMe}
+
+\input{11-FromTheLeastToTheGreatest}
+
+\input{12-IWillForgiveTheirIniquity}
+
+\input{13-Review}
+
+\appendix
+\backmatter
+
+\end{document}

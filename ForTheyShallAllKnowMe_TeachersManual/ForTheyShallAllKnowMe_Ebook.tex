@@ -1,5 +1,5 @@
-\documentclass[12pt, letterpaper]{book}
-\usepackage[margin=1in]{geometry} % layouts
+%\documentclass[12pt,a6paper]{book}
+%\usepackage[margin=1in]{geometry} % layouts
 % mobile phone layout
 %\documentclass[12pt, a6paper]{book}
 %\e[margin=5mm]{geometry} % layouts
@@ -9,53 +9,53 @@
 
 %\teacherfalse
 
-\usepackage{titlesec} % custom chapter titles.
+%\usepackage{titlesec} % custom chapter titles.
 \usepackage{bibleref} % bible verse quoting
 \usepackage{multicol} % two-column scripture readings
 \usepackage{attrib} % bible verse quoting
-\usepackage[hidelinks]{hyperref} % locating stuff
-\usepackage{comment} % for conditional compilation
+%\usepackage[hidelinks]{hyperref} % locating stuff
+%\usepackage{comment} % for conditional compilation
 \usepackage{booktabs} % for a good table
 \usepackage{graphicx} % for the logo
 %\usepackage{lipsum} % fill in gaps for fomatting
 %\usepackage{showframe} % layout
 
 %----------------------------------------------------------
-\newcommand*{\wscoclogo}{\includegraphics[height=1.5em]{walnutstcoc_logo_bw.png}} % Generic publisher logo
 %----Begin Custom Title
-\newcommand*{\titleGM}{\begingroup % Create the command for including the title page in the document
-\hbox{ % Horizontal box
-\hspace*{0.08\textwidth} % Whitespace to the left of the title page
-\rule{1pt}{\textheight} % Vertical line
-\hspace*{0.04\textwidth} % Whitespace between the vertical line and title page text
-\parbox[b]{0.9\textwidth}{ % Paragraph box which restricts text to less than the width of the page
-
-{\noindent\LARGE\bfseries ``For They Shall All Know Me''}
-
-\vspace{0.5\baselineskip}
-
-{\Large \textit{Developing a New Covenant Relationship with God}}
-
-\vspace{1\baselineskip}
-
-{\noindent\LARGE TEACHERS MANUAL}
-
-\vspace{4\baselineskip}
-
-{\Large \textsc{Todd Jobe}} % Author name
-
-\vspace{0.5\textheight} % Whitespace between the title block and the publisher
-
-{\noindent Walnut Street Church of Christ \wscoclogo}
-
-\vspace{0.5\baselineskip} % Publisher and logo
-}}
-\endgroup}
+%\newcommand*{\wscoclogo}{\includegraphics[height=1.5em]{walnutstcoc_logo_bw.png}} % Generic publisher logo
+%\newcommand*{\titleGM}{\begingroup % Create the command for including the title page in the document
+%\hbox{ % Horizontal box
+%\hspace*{0.08\textwidth} % Whitespace to the left of the title page
+%\rule{1pt}{\textheight} % Vertical line
+%\hspace*{0.04\textwidth} % Whitespace between the vertical line and title page text
+%\parbox[b]{0.9\textwidth}{ % Paragraph box which restricts text to less than the width of the page
+%
+%{\noindent\LARGE\bfseries ``For They Shall All Know Me''}
+%
+%\vspace{0.5\baselineskip}
+%
+%{\Large \textit{Developing a New Covenant Relationship with God}}
+%
+%\vspace{1\baselineskip}
+%
+%{\noindent\LARGE TEACHERS MANUAL}
+%
+%\vspace{4\baselineskip}
+%
+%{\Large \textsc{Todd Jobe}} % Author name
+%
+%\vspace{0.5\textheight} % Whitespace between the title block and the publisher
+%
+%{\noindent Walnut Street Church of Christ \wscoclogo}
+%
+%\vspace{0.5\baselineskip} % Publisher and logo
+%}}
+%\endgroup}
 %----End Custom Title
 %---------Old Title----------------------------------------------------------
-%\title{``For They Shall All Know Me''\\\Large{Developing a New Covenant Relationship with God}\\\LARGE\uppercase{TEACHERS MANUAL}}
-%\author{Walnut Street Church of Christ\\Todd Jobe}
-%\date{Spring 2016}
+\title{``For They Shall All Know Me''\\\Large{Developing a New Covenant Relationship with God}\\\LARGE\uppercase{TEACHERS MANUAL}}
+\author{Walnut Street Church of Christ\\Todd Jobe}
+\date{Spring 2016}
 %----------------------------------------------------------
 
 
@@ -117,31 +117,31 @@
 \newcommand\bvs[2]{\emph{\bibleverse{#1}#2} -- } % bible verse intext reference
 
 % chapter format
-\titleformat{\chapter}[hang] 
-{\normalfont\Large\bfseries}{\chaptertitlename\ \thechapter:}{0.2em}{} 
-\titlespacing*{\chapter}{0pt}{-20pt}{10pt}
-
-% sectioning formats
-\titleformat{\section}
-{\normalfont\large\bfseries}{\thesection}{.5em}{}[{\titlerule[0.8pt]}]
-\titleformat{\subsection}
-{\normalfont\normalsize\bfseries}{\thesubsection}{.5em}{}
-\titleformat{\subsubsection}
-{\normalfont\normalsize\bfseries}{\thesubsubsection}{.5em}{}
-\titleformat{\paragraph}[runin]
-{\normalfont\normalsize\bfseries}{\theparagraph}{.5em}{}
-\titleformat{\subparagraph}[runin]
-{\normalfont\normalsize\bfseries}{\thesubparagraph}{.5em}{}
+%\titleformat{\chapter}[hang] 
+%{\normalfont\Large\bfseries}{\chaptertitlename\ \thechapter:}{0.2em}{} 
+%\titlespacing*{\chapter}{0pt}{-20pt}{10pt}
+%
+%% sectioning formats
+%\titleformat{\section}
+%{\normalfont\large\bfseries}{\thesection}{.5em}{}[{\titlerule[0.8pt]}]
+%\titleformat{\subsection}
+%{\normalfont\normalsize\bfseries}{\thesubsection}{.5em}{}
+%\titleformat{\subsubsection}
+%{\normalfont\normalsize\bfseries}{\thesubsubsection}{.5em}{}
+%\titleformat{\paragraph}[runin]
+%{\normalfont\normalsize\bfseries}{\theparagraph}{.5em}{}
+%\titleformat{\subparagraph}[runin]
+%{\normalfont\normalsize\bfseries}{\thesubparagraph}{.5em}{}
 
 \begin{document}
 
 \frontmatter
 
 % --- Old Title
-%\maketitle
+\maketitle
 % --- Custom Title
-\thispagestyle{empty} % Removes page numbers from title page
-\titleGM % This command includes the title page
+%\thispagestyle{empty} % Removes page numbers from title page
+%\titleGM % This command includes the title page
 % --- 
 \clearpage
 ~\vfill

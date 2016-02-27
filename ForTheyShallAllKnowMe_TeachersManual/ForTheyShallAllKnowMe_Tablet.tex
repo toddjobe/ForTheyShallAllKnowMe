@@ -1,13 +1,11 @@
-\documentclass[12pt, letterpaper]{book}
-\usepackage[margin=1in]{geometry} % layouts
+%\documentclass[12pt, letterpaper]{book}
+%\usepackage[margin=1in]{geometry} % layouts
 % mobile phone layout
-%\documentclass[12pt, a6paper]{book}
-%\e[margin=5mm]{geometry} % layouts
-% ipad layout
-%\documentclass[12pt, a5paper]{book}
+%\documentclass[12pt, openany, a6paper]{book}
 %\usepackage[margin=5mm]{geometry} % layouts
-
-%\teacherfalse
+% ipad layout
+\documentclass[12pt, a5paper, openany]{book}
+\usepackage[margin=5mm]{geometry} % layouts
 
 \usepackage{titlesec} % custom chapter titles.
 \usepackage{bibleref} % bible verse quoting
@@ -17,18 +15,22 @@
 \usepackage{comment} % for conditional compilation
 \usepackage{booktabs} % for a good table
 \usepackage{graphicx} % for the logo
+\usepackage{longtable} % for the scripture references that go too long
 %\usepackage{lipsum} % fill in gaps for fomatting
 %\usepackage{showframe} % layout
+\usepackage{helvet} %arial for iphone
 
 %----------------------------------------------------------
-\newcommand*{\wscoclogo}{\includegraphics[height=1.5em]{walnutstcoc_logo_bw.png}} % Generic publisher logo
+\renewcommand\familydefault{\sfdefault} % sans serif for digital
+
 %----Begin Custom Title
+\newcommand*{\wscoclogo}{\includegraphics[height=1.5em]{walnutstcoc_logo_bw.png}} % Generic publisher logo
 \newcommand*{\titleGM}{\begingroup % Create the command for including the title page in the document
 \hbox{ % Horizontal box
 \hspace*{0.08\textwidth} % Whitespace to the left of the title page
 \rule{1pt}{\textheight} % Vertical line
 \hspace*{0.04\textwidth} % Whitespace between the vertical line and title page text
-\parbox[b]{0.9\textwidth}{ % Paragraph box which restricts text to less than the width of the page
+\parbox[b]{0.8\textwidth}{ % Paragraph box which restricts text to less than the width of the page
 
 {\noindent\LARGE\bfseries ``For They Shall All Know Me''}
 
@@ -38,7 +40,7 @@
 
 \vspace{1\baselineskip}
 
-{\noindent\LARGE TEACHERS MANUAL}
+\vspace{1\baselineskip}%{\noindent\LARGE TEACHERS MANUAL}
 
 \vspace{4\baselineskip}
 
@@ -67,10 +69,10 @@
 \specialcomment{intro}{\section*{Introduction}}{}
 \specialcomment{bible}{
 \section*{Scripture Readings}
-\begin{multicols}{2}
+%\begin{multicols}{2}
 }
 {
-	\end{multicols}
+%	\end{multicols}
 }
 \specialcomment{goals}{
 	\begingroup
@@ -94,20 +96,34 @@
 	
 	\section*{Questions}
 	
-	\begin{enumerate} \itemsep6em \parsep200pt
+	\begin{enumerate}
 	
 }
 {
 	\end{enumerate}
 	\endgroup
 }
+%\newcommand{scriptRefTab}{\begin{tabular}{lrp{11cm}}}
+%\newcommand{scriptRefTab}{\begin{longtable}{lrp{0.68\textwidth}}}
+%\newcommand{scriptRefTab}{\begin{longtable}{lrp{0.55\textwidth}}}
 
+\newenvironment{scriptref}{
+	\begingroup
+	\begin{center}
+	%\begin{tabular}{lrp{11cm}}
+	\begin{longtable}{lrp{0.66\textwidth}}
+	%\begin{longtable}{lrp{0.55\textwidth}}
+}
+{
+	\end{longtable}
+	\end{center}
+	\endgroup
+}
 %\excludecomment{goals}
-%\excludecomment{intro}
+\excludecomment{intro}
 %\excludecomment{bible}
-%\excludecomment{discussion}
+\excludecomment{discussion}
 %\excludecomment{questions}
-
 \renewcommand{\labelitemi}{--} % better start to lists.
 \newcommand\dsubsec[3]{\subsection*{#1 \normalsize{(#2, #3 min)}}} % discussion subsection
 %\newcommand\questions{\section*{Questions}} 
@@ -123,7 +139,7 @@
 
 % sectioning formats
 \titleformat{\section}
-{\normalfont\large\bfseries}{\thesection}{.5em}{}[{\titlerule[0.8pt]}]
+{	\normalfont\large\bfseries}{\thesection}{.5em}{}[{\titlerule[0.8pt]}]
 \titleformat{\subsection}
 {\normalfont\normalsize\bfseries}{\thesubsection}{.5em}{}
 \titleformat{\subsubsection}
@@ -134,7 +150,7 @@
 {\normalfont\normalsize\bfseries}{\thesubparagraph}{.5em}{}
 
 \begin{document}
-
+\pagestyle{plain}
 \frontmatter
 
 % --- Old Title

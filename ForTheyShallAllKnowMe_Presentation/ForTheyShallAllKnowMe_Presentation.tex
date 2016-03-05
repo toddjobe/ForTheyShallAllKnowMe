@@ -1,21 +1,25 @@
-% $Header: /Users/josph/Documents/LaTeX/beamer/solutions/generic-talks/generic-ornate-15min-45min.en.tex,v 90e850259b8b 2007/01/28 20:48:30 tantau $
+\documentclass{beamer} % presentation class
 
-\PassOptionsToPackage{subsection=false}{beamerouterthememiniframes} % prevent subsection bar in outer theme
-\documentclass{beamer}
-\usepackage{attrib}
-\usepackage{xstring}
-\includeonlylecture{02}
+% The theme to use
 \mode<presentation>
 {
-  \usetheme{Szeged}
+  \useoutertheme[footline=empty, subsection=false]{miniframes}
+	\usecolortheme{sandystonebeachoceandiver}
   \setbeamercovered{transparent}
 }
 
+\usepackage{attrib} % for quoting bible verses with attribution
+\usepackage{xstring} % more complex strings
+\usepackage{graphicx} % graphics inclusion
 \usepackage[english]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage{times}
 \usepackage[T1]{fontenc}
-\usepackage{remreset}% tiny package containing just the \@removefromreset command
+\usepackage{remreset}% tiny package containing just the 
+
+
+\includeonlylecture{01} % including on a lect
+
 
 %% Get the points on the presentation without subsections
 \makeatletter
@@ -37,17 +41,15 @@
 }
 
 \newcommand{\versehighlight}[2]{
-\def\v{#2}
-\def\x{#1}
 \expandarg
-\StrSubstitute{\x}{\v}{\alert{\v}}
+\StrSubstitute{#2}{#1}{\alert{#1}}
 }
 
 \newcommand{\keyverse}{
-31 Behold, the days are coming, declares the Lord, when I will make a new covenant with the house of Israel and the house of Judah, 32 not like the covenant that I made with their fathers on the day when I took them by the hand to bring them out of the land of Egypt, my covenant that they broke, though I was their husband, declares the Lord. 33 For this is the covenant that I will make with the house of Israel after those days, declares the Lord: I will put my law within them, and I will write it on their hearts. And I will be their God, and they shall be my people.}
+31 Behold, the days are coming, declares the Lord, when I will make a new covenant with the house of Israel and the house of Judah, 32 not like the covenant that I made with their fathers on the day when I took them by the hand to bring them out of the land of Egypt, my covenant that they broke, though I was their husband, declares the Lord. 33 For this is the covenant that I will make with the house of Israel after those days, declares the Lord: I will put my law within them, and I will write it on their hearts. And I will be their God, and they shall be my people. 34 And no longer shall each one teach his neighbor and each his brother, saying, `Know the Lord,' for they shall all know me, from the least of them to the greatest, declares the Lord. For I will forgive their iniquity, and I will remember their sin no more.}
 
 \newcommand{\keyversehiglight}[1]{
-\versehighlight{\keyverse}{#1}
+\versehighlight{#1}{\keyverse}
 }
 
 %%%%%%%%%%%%%%
@@ -78,7 +80,11 @@
 {Spring 2016 / Sunday AM Bible Study}
 
 \subject{Sunday morning classes Walnut Street Church of Christ}
-% This is only inserted into the PDF information catalog. Can be left
+
+\pgfdeclareimage[height=3cm]{touchOfGod}{figures/creation_of_adam.png}
+\titlegraphic{\pgfuseimage{touchOfGod}}
+
+%	 This is only inserted into the PDF information catalog. Can be left
 % out. 
 
 
@@ -87,31 +93,31 @@
 % is a graphic format that can be processed by latex or pdflatex,
 % resp., then you can add a logo as follows:
 
-% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
-% \logo{\pgfuseimage{university-logo}}
+%\pgfdeclareimage[height=0.3cm]{logo}{figures/walnutstcoc_logo_bw.png}
+%\logo{{\tiny Walnut Street Church of Christ} \pgfuseimage{logo}}
 
 
 
 % Delete this, if you do not want the table of contents to pop up at
 % the beginning of each subsection:
-\AtBeginSubsection[]
-{
-  \begin{frame}<beamer>{Outline}
-    \tableofcontents[currentsection,currentsubsection]
-  \end{frame}
-}
+%\AtBeginSubsection[]
+%{
+  %\begin{frame}<beamer>{Outline}
+    %\tableofcontents[currentsection,currentsubsection]
+  %\end{frame}
+%}
 
 % When having one big beamer document for the entire course you can customize the output for each class.
 \AtBeginLecture{
-\frame{\Large \insertlecture}
-\begin{frame}{Outline}
-  \tableofcontents
-  % You might wish to add the option [pausesections]
-\end{frame}
+\frame{\Large Lesson~\insertlecture}
+%\begin{frame}{Outline}
+%  \tableofcontents
+%  % You might wish to add the option [pausesections]
+%\end{frame}
 }
+
 % If you wish to uncover everything in a step-wise fashion, uncomment
 % the following command: 
-
 %\beamerdefaultoverlayspecification{<+->}
 
 

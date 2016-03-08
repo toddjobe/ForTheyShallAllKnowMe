@@ -6,6 +6,8 @@
   \useoutertheme[footline=empty, subsection=false]{miniframes}
 	\usecolortheme{sandystonebeachoceandiver}
   \setbeamercovered{transparent}
+	\setbeamertemplate{navigation symbols}{}
+	%\setbeameroption{show only notes}
 }
 
 \usepackage{attrib} % for quoting bible verses with attribution
@@ -18,7 +20,7 @@
 \usepackage{remreset}% tiny package containing just the 
 
 
-\includeonlylecture{01} % including on a lect
+\includeonlylecture{02} % including on a lect
 
 
 %% Get the points on the presentation without subsections
@@ -70,8 +72,8 @@
   %Department of Computer Science\\
   %University of Somewhere
   %\and
-  %\inst{2}%
   %Department of Theoretical Philosophy\\
+  %\inst{2}%
   %University of Elsewhere}
 %% - Use the \inst command only if there are several affiliations.
 %% - Keep it simple, no one is interested in your street address.
@@ -82,7 +84,7 @@
 \subject{Sunday morning classes Walnut Street Church of Christ}
 
 \pgfdeclareimage[height=3cm]{touchOfGod}{figures/creation_of_adam.png}
-\titlegraphic{\pgfuseimage{touchOfGod}}
+\titlegraphic{\pgfuseimage{touchOfGod}\\{\tiny \emph{Workbook}~~Print goo.gl/iSmU50~~Phone goo.gl/KCzzWU~~Tablet goo.gl/FgxaKp}}
 
 %	 This is only inserted into the PDF information catalog. Can be left
 % out. 
@@ -123,7 +125,7 @@
 
 \begin{document}
 
-\begin{frame}
+\begin{frame}[plain]
   \titlepage
 \end{frame}
 

@@ -1,0 +1,14 @@
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex
+*.tcp
+*.toc
+*.tps
+*.nav
+*.snm
+*.tiw
+*.vrb
+*.cut

@@ -3,7 +3,7 @@
 *.blg
 *.log
 *.out
-*.synctex
+*.synctex*
 *.tcp
 *.toc
 *.tps

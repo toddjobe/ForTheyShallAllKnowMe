@@ -1,6 +1,7 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1460232497677" ID="ID_536794752" MODIFIED="1460244357556" TEXT="i will make a new covenant scriptures">
+<node COLOR="#999999" CREATED="1460232497677" ID="ID_536794752" MODIFIED="1460765249446" TEXT="i will make a new covenant scriptures">
+<font NAME="SansSerif" SIZE="10"/>
 <node CREATED="1460232508267" ID="ID_622915077" MODIFIED="1460232525165" POSITION="right" TEXT="Luke 22:14-23">
 <node CREATED="1460232621735" ID="ID_1689802461" MODIFIED="1460232645847" TEXT="The New Covenant is ...">
 <node CREATED="1460232648899" ID="ID_1161346557" MODIFIED="1460232654445" TEXT="The Kingdom"/>
@@ -28,7 +29,7 @@
 <node CREATED="1460234292482" ID="ID_1662038995" MODIFIED="1460234296131" TEXT="God could have mercy on all"/>
 </node>
 </node>
-<node CREATED="1460232785735" ID="ID_74152728" MODIFIED="1460232792715" POSITION="left" TEXT="Eph. 2">
+<node CREATED="1460232785735" FOLDED="true" ID="ID_74152728" MODIFIED="1460812128493" POSITION="left" TEXT="Eph. 2">
 <node CREATED="1460232793902" ID="ID_1357680472" MODIFIED="1460232808328" TEXT="The New Covenant was needed because...">
 <node CREATED="1460232809480" ID="ID_815933870" MODIFIED="1460232939769" TEXT="We were dead in sin 1-3"/>
 <node CREATED="1460232940941" ID="ID_1576074460" MODIFIED="1460233390470" TEXT="We were Gentiles in the flesh">
